@@ -20,7 +20,7 @@ const SlicedTransition = ({ children }: { children: React.ReactNode }) => {
         // Left half (desktop) or Top half (mobile)
         const isFirstHalf = i < totalStrips / 2;
         // Smooth staggered delay moving across
-        const delay = i * 0.03;
+        const delay = i * 0.045;
 
         return (
           <motion.div
@@ -48,7 +48,7 @@ const SlicedTransition = ({ children }: { children: React.ReactNode }) => {
                   }
             }
             transition={{
-              duration: 0.9,
+              duration: 1.4,
               ease: [0.76, 0, 0.24, 1], // Cinematic ease out
               delay: delay
             }}
@@ -101,7 +101,7 @@ export default function App() {
           className="relative z-0 w-full h-[100dvh] overflow-hidden"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, ease: [0.76, 0, 0.24, 1], delay: 0.2 }}
+          transition={{ duration: 1.2, ease: [0.76, 0, 0.24, 1], delay: 0.4 }}
         >
           <Dashboard />
         </motion.div>
