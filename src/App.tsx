@@ -98,7 +98,7 @@ export default function App() {
       {!isLoading && (
         <motion.div
           key="dashboard"
-          className="relative z-0 w-full h-[100dvh] overflow-hidden"
+          className="relative z-0 w-full min-h-screen"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, ease: [0.76, 0, 0.24, 1], delay: 0.4 }}
